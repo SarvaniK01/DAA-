@@ -65,8 +65,8 @@ void HuffmanCode(char data[], int freq[], int size){
 
 int main(){
 	//predefined inputs
-	// char data[] = {'A', 'B', 'C', 'D'};
-	// int freq[] = {23, 12, 34, 10};
+	// char data[] = { 'a', 'b', 'c', 'd', 'e', 'f' };
+    // int freq[] = { 5, 9, 12, 13, 16, 45};
 
 	//taking input from the user for the number of elements to be included in the array
 	int n;
@@ -89,6 +89,19 @@ int main(){
 	for(int i=0; i<n; i++){
 		cin>>freq[i];
 	}
-
-	HuffmanCode(data, freq, 4);
+	cout<<endl;
+	HuffmanCode(data, freq, n);
 }
+
+// data[] = { 'a', 'b', 'c', 'd', 'e', 'f' };
+// freq[] = { 5, 9, 12, 13, 16, 45};
+
+// when taken above arrays as input the following will be the output
+//f: 0
+// c: 100
+// d: 101
+// a: 1100
+// b: 1101
+// e: 111
+
+//above i/p and o/p values from gfg
