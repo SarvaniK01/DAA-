@@ -11,10 +11,12 @@ void fibonacciNR(int n){
     for(int i = 0; i<n; i++){
         if(i == 0){
             cout<<t1<<" ";
+            continue;
         }
 
         if(i == 1){
             cout<<t2<<" ";
+            continue;
         }
 
         nextTerm = t1 + t2;
@@ -26,22 +28,16 @@ void fibonacciNR(int n){
     cout<<endl;
 }
 
-void fibonacciR(int n){
-    int t1 = 0;
-    int t2 = 1;
+int fibonacciR(int n){
+
     int nextTerm = 0;
 
-    // base function
-    cout<<t1<<" "<<t2<<" ";
-
-    for(int i=0; i<n; i++){
-        nextTerm = t1 + t2;
-
-        cout<<nextTerm<<" ";
-
-        t1 = t2;
-        t2 = nextTerm;
+    if(n==0 || n==1){
+        return n;
     }
+
+    nextTerm = fibonacciR(n-1) + fibonacciR(n-2);
+    return nextTerm;
 }
 
 int main(){
@@ -57,5 +53,7 @@ int main(){
 
     //Recursive
     cout<<"Recursive:"<<endl;
-    fibonacciR(n);
+    for(int i = 0; i<n; i++){
+        cout<<fibonacciR(i)<<" ";
+    }
 }

@@ -64,8 +64,31 @@ void HuffmanCode(char data[], int freq[], int size){
 
 
 int main(){
-	char data[] = {'A', 'B', 'C', 'D'};
-	int freq[] = {23, 12, 34, 10};
+	//predefined inputs
+	// char data[] = {'A', 'B', 'C', 'D'};
+	// int freq[] = {23, 12, 34, 10};
+
+	//taking input from the user for the number of elements to be included in the array
+	int n;
+	cout<<"Enter the number of data/freq array elements:";
+	cin>>n;
+
+	//declaring data and frequency arrays
+	char data[n];
+	int freq[n];
+
+	//taking input for the data array
+	cout<<"Enter the data elements:"<<endl;
+	for(int i=0; i<n;i++){
+		cin>>data[i];
+	}
+	cout<<endl;
+
+	//taking input for frequency array
+	cout<<"Enter the frequency elements:"<<endl;
+	for(int i=0; i<n; i++){
+		cin>>freq[i];
+	}
 
 	HuffmanCode(data, freq, 4);
 }
