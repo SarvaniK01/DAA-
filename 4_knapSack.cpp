@@ -3,13 +3,6 @@
 using namespace std;
 
 int main(){
-    //predefined inputs
-    // int capacity = 10;
-    // int items = 4;
-    
-    // int value[items + 1] = {0, 3, 7, 2, 9};
-    // int weight[items + 1] = {0, 2, 2, 4, 5};
-
     int capacity;
     cout<<"Enter the maximum capacity of the knapsack:";
     cin>>capacity;
@@ -58,3 +51,21 @@ int main(){
 
     cout<<"Maximum profit earned is:"<<V[items][capacity]<<endl;
 }
+
+// Input for user to check:
+// Enter the maximum capacity of the knapsack:50
+// Enter the number of items:3
+// Enter the value/price of the items:
+// 60
+// 100
+// 120
+
+// Enter the weight of the items:
+// 10
+// 20
+// 30
+
+// Output:
+// Maximum profit earned is:220
+
+//inputs taken from gfg

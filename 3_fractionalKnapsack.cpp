@@ -67,3 +67,27 @@ int main(){
 
     cout<<endl<<"Maximum profit earned is:"<<value;
 }
+
+// Input for user:
+// Enter the max capacity of Knapsack:60
+
+// Enter the number of items:4
+
+
+// Enter the values/profits of items:
+// 100
+// 280
+// 120
+// 120
+
+// Enter the weights of items:
+// 10
+// 40
+// 20
+// 24
+
+
+// Output:
+// Maximum profit earned is:440
+
+//inputs taken from gfg
