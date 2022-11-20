@@ -4,18 +4,19 @@
 using namespace std;
 
 int main() {
-    // Write C++ code here
-    time_t start, end;
-    time(&start);
     
     int n;
     cout<<"Enter the value of n:";
     cin>>n;
     
+    clock_t start, end;
+
     int t1 = 0; 
     int t2 = 1;
     int nextTerm = 0;
 
+    start = clock();
+    
     for(int i = 0; i<n; i++){
         if(i == 0){
             cout<<t1<<" ";
@@ -35,7 +36,8 @@ int main() {
     }
     cout<<endl;
     
-    time(&end);
+    end = clock();
+
     double timeRequired = double(end - start);
     cout<<"Time Required for iterative function:"  <<fixed<<setprecision(5)<<timeRequired<<" secs";
     return 0;

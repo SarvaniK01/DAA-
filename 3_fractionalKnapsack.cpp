@@ -39,21 +39,31 @@ double fractionalKnapsack(struct Item arr[], int N, int size){
 }
 
 int main(){
-    int N = 60;
+    int N;
+    cout<<"Enter the max capacity of Knapsack:";
+    cin>>N;
+    
+    cout<<endl;
+    
+    int n;
+    cout<<"Enter the number of items:";
+    cin>>n;
+    cout<<endl;
+    
+    struct Item arr[n];
+    
+    cout<<endl<<"Enter the values/profits of items:"<<endl;
+    for(int i=0; i<n; i++){
+        cin>>arr[i].value;
+    }
+    
+    
+    cout<<endl<<"Enter the weights of items:"<<endl;
+    for(int i=0; i<n; i++){
+        cin>>arr[i].weight;
+    }
 
-    Item arr[] = {
-        {100, 10},
-        {280, 40},
-        {120, 20},
-        {120, 24}
-    };
+    double value = fractionalKnapsack(arr, N, n);
 
-    int size = sizeof(arr) / sizeof(arr[0]);
-    // cout<<"size:"<<size<<endl;
-    // cout<<"sizeof(arr):"<<sizeof(arr)<<endl;
-    // cout<<"sizeof(arr[0]):"<<sizeof(arr[0])<<endl;
-
-    double value = fractionalKnapsack(arr, N, size);
-
-    cout<<"Maximum profit earned is:"<<value;
+    cout<<endl<<"Maximum profit earned is:"<<value;
 }

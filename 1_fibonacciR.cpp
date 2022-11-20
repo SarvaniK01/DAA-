@@ -17,20 +17,22 @@ int fibonacciR(int n){
 }
 
 int main(){
-    time_t start, end;
-    time(&start);
     
     int n;
     cout<<"Enter the value of n:";
     cin>>n;
+    
+    clock_t start, end;
+    
+    start = clock();
 
-    //Recursive
     cout<<"Recursive:"<<endl;
     for(int i = 0; i<n; i++){
         cout<<fibonacciR(i)<<" ";
     }
     
-    time(&end);
+    end = clock();
+
     double timeRequired = double(end - start);
     cout<<endl<<"Time Required for recursive function:"<<fixed<<setprecision(5)<<timeRequired<<endl;
 }
